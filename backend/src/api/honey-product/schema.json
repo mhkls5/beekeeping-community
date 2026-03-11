@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "honey_products",
+  "info": {
+    "singularName": "honey-product",
+    "pluralName": "honey-products",
+    "displayName": "Honey Product",
+    "description": "はちみつ商品情報を管理するコレクション"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product_name": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "integer",
+      "min": 0
+    },
+    "harvest_date": {
+      "type": "date"
+    },
+    "flower_source": {
+      "type": "string"
+    },
+    "quantity_kg": {
+      "type": "decimal",
+      "min": 0
+    },
+    "is_sold": {
+      "type": "boolean",
+      "default": false
+    },
+    "beekeeper": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::beekeeper.beekeeper",
+      "inversedBy": "honey_products"
+    },
+    "product_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

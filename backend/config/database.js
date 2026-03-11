@@ -1,9 +1,9 @@
-module.exports = {
+module.exports = ({ env }) => ({
   connection: {
     client: 'sqlite',
     connection: {
-      filename: '.tmp/data.db',
+      filename: env('DATABASE_FILENAME', '.tmp/data.db'),
     },
     useNullAsDefault: true,
   },
-};
+});

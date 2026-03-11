@@ -14,8 +14,15 @@
 
 - Frontend: Next.js
 - CMS: Strapi（Headless）
-- DB: PostgreSQL
+- DB: SQLite（開発用）/ PostgreSQL（本番用）
 - Host: Vercel
+
+## 開発状況
+
+現在、以下の機能を実装中です：
+- ✅ Next.jsフロントエンド（基本ページ作成完了）
+- ⏳ Strapi CMS（Node.js v22と互換性の問題あり、対応中）
+- ✅ API設計（beekeeper, hive-record, honey-product のContent Type定義完了）
 
 ## 開発
 

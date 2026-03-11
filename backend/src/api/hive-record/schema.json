@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hive_records",
+  "info": {
+    "singularName": "hive-record",
+    "pluralName": "hive-records",
+    "displayName": "Hive Record",
+    "description": "巣箱の記録情報を管理するコレクション"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "weather_description": {
+      "type": "string",
+      "required": true
+    },
+    "temperature": {
+      "type": "decimal",
+      "min": -50,
+      "max": 50
+    },
+    "hive_status": {
+      "type": "text"
+    },
+    "note": {
+      "type": "text"
+    },
+    "beekeeper": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::beekeeper.beekeeper",
+      "inversedBy": "hive_records"
+    }
+  }
+}

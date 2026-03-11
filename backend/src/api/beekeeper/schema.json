@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "beekeepers",
+  "info": {
+    "singularName": "beekeeper",
+    "pluralName": "beekeepers",
+    "displayName": "Beekeeper",
+    "description": "養蜂家の情報を管理するコレクション"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "prefecture": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string"
+    },
+    "experience_years": {
+      "type": "integer",
+      "min": 0
+    },
+    "hive_count": {
+      "type": "integer",
+      "min": 0
+    },
+    "bee_type": {
+      "type": "enumeration",
+      "enum": [
+        "西洋蜜蜂",
+        "ニホンゴン",
+        "その他"
+      ]
+    },
+    "location_lat": {
+      "type": "decimal",
+      "required": false
+    },
+    "location_lng": {
+      "type": "decimal",
+      "required": false
+    },
+    "apiary_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}
