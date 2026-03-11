@@ -1,0 +1,15 @@
+{
+  "kind": "singleType",
+  "collectionName": "beekeeping_weathers",
+  "info": {
+    "singularName": "beekeeping-weather",
+    "pluralName": "beekeeping-weathers",
+    "displayName": "Beekeeping Weather",
+    "description": "養蜂に特化した天気情報を提供するAPI"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {}
+}
